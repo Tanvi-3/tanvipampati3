@@ -4,12 +4,25 @@ title: Student Blog
 ---
 
 
-## Build you Home Page here 
-This is about your journey. Start now!!!
+## **Tanvi's Blog**
 
-## Overview of Hacks, Study and Tangibles
-Blogging in GitHub pages is a way to learn and code at the same time. 
 
-- Plans, Lists, [Scrum Boards](https://clickup.com/blog/scrum-board/) help you to track key events, show progress and record time.  Effort is a big part of your class grade.  Show plans and time spent!
-- [Hacks(Todo)](https://levelup.gitconnected.com/six-ultimate-daily-hacks-for-every-programmer-60f5f10feae) enable you to stay in focus with key requirements of the class.  Each Hack will produce Tangibles.
-- Tangibles or [Tangible Artifacts](https://en.wikipedia.org/wiki/Artifact_(software_development)) are things you accumulate as a learner and coder. 
+
+## All About Me! 
+- My name is Tanvi Pampati!
+- I'm a junior at Del Norte High School.
+- I play Field Hockey
+- I have a younger sister who just started middle school
+- I aspire to have a career in medicine
+
+
+<img src="images/IMG_7939.jpg" alt="My freeform" height="400" width="300">
+<img src="images/emojilaugh-emoji.gif" alt="fun gif" height="100" width="100">
+
+## FUN FACTS!!
+- I went to yellowstone national park with my family over the summer
+- My lucky number is 3, because I was born on the 3rd month of the year
+- My favorite movie is Iron Man 2
+
+
+<img src="images/IMG_7936.JPG" alt="Photos in my life" height="400" width="350">
