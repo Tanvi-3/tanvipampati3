@@ -10,7 +10,7 @@ courses: { compsci: {week: 1} }
 
 ### Summary of Accomplishments
 > Update Blog to contain all hacks.  
-- Reviewed with Pair.  Discuss/Show evidence.
+-  Reviewed with Pair.  Discuss/Show evidence.
 - Discuss laptop, cloud computer.
 - Discuss tools setup and troubles.
 - Show personal blog / home page.
@@ -21,3 +21,5 @@ courses: { compsci: {week: 1} }
 - Run make commands to build and test blog locally, before pushing changes to GitHub pages.
 - Discuss GitHub Account, show ability to push/pull changes from VSCode.
 - Discuss development on Themes, show how you plan to organized lab notebook.
+- Included Lab Notebook
+- Made Snake Game
