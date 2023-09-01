@@ -2,7 +2,7 @@
 toc: true
 comments: true
 layout: post
-title: Review Ticket
+title: Review Ticket 2
 type: tangibles
 courses: { compsci: {week: 2} }
 ---
@@ -13,3 +13,4 @@ courses: { compsci: {week: 2} }
 - Made Snake Game
 - Made Calculator
 - Cloned student repository to have only the Compsci menu, and not the csse, csp, and csa
+- - JS Output jquery
