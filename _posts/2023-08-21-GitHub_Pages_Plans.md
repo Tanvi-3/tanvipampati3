@@ -3,7 +3,6 @@ toc: true
 comments: false
 layout: post
 title: Week 1 Plan 
-description: Example Plan!!! Analyze hacks and plan.
 type: plans
 courses: { compsci: {week: 1} }
 ---

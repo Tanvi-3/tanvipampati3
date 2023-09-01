@@ -3,7 +3,6 @@ toc: true
 comments: false
 layout: post
 title: Snake
-description: Example Blog!!!  This shows planning and notes from hacks.
 type: hacks
 courses: { compsci: {week: 2} }
 --- 
