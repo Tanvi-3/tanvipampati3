@@ -99,7 +99,7 @@ courses: { compsci: {week: 2} }
                 <td>SZA</td>
                 <td>2020</td>
                 <td>SOS</td>
-                <td>R%B</td>
+                <td>R&B</td>
             </tr>
             <tr>
                 <td>Rich Flex</td>
