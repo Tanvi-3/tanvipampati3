@@ -271,7 +271,7 @@ courses: { compsci: {week: 2} }
             }
             // Repaint canvas
             ctx.beginPath();
-            ctx.fillStyle = "red";
+            ctx.fillStyle = "pink";
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             // Paint snake
             for(let i = 0; i < snake.length; i++){
