@@ -3,7 +3,7 @@ toc: true
 comments: true
 layout: post
 title: Tool Setup and Linux Commands
-type: Hacks
+type: hacks
 courses: { compsci: {week: 3} }
 ---
 
