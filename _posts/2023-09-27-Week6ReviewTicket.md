@@ -12,3 +12,5 @@ courses: { compsci: {week: 6} }
 - However, there is room for improvement in coordination and documentation. 
 - The implementation of GitHub Pages and Utterances enhances the review and feedback process.
 
+## Peer Reviews
+- 
