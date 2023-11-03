@@ -4,7 +4,7 @@ comments: true
 layout: post
 title: CB 3.16-3.17 Simulations
 type: plans
-courses: { compsci: {week:10} }
+courses: { compsci: {week: 10} }
 ---
 
 ## CB 3.16-3.17 Simulations 
