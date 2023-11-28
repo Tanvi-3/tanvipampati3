@@ -25,4 +25,4 @@ courses: { compsci: {week: 12} }
 
 # Libraries:
 - being able to understand and import the different libraries allows us t perfrom functions that use variables and features from the library imported
-- The different API that is contained in these libararoes
+- The different API that is contained in these libarries
