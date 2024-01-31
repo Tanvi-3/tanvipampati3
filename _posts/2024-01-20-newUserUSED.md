@@ -9,106 +9,109 @@ hide: true
 permalink: /newUser
 ---
 
-<style>
+<html lang="en">
 
-</style>
-<!-- 
-A simple HTML login form with a Login action when button is pressed.  
+<head>
+<script>
+    //import { uri, options } from '{{site.baseurl}}/assets/js/api/config.js';
 
-The form triggers the login_user function defined in the JavaScript below when the Login button is pressed.
--->
+    function signUp_user() {
+        const enteredName = document.getElementById("name").value;
+        const enteredUid = document.getElementById("uid").value;
+        const enteredPassword = document.getElementById("password").value;
+        const enteredDOB = document.getElementById("dob").value;
+        console.log("Name = " + enteredName)
+        console.log("Uid = " + enteredUid)
+        console.log("Password = " + enteredPassword)
+        console.log("dob = " + enteredDOB)
+        const signupHeaders = new Headers();
+      signupHeaders.set('111', '222');
+      
+      signupHeaders.set("Accept", "*/*");
+      signupHeaders.set("Accept-Language", "en-US,en;q=0.9");
+      signupHeaders.set("Content-Type", "application/json");
 
-<div class="container">
-    <form id="username" action="javascript:login_user()">
-        <label>
-            Name:
-            <input class="userInput" type="text" name="name" id="name" required>
-        </label>
-        <p><label>
-            User ID:
-            <input class="userInput" type="text" name="uid" id="uid" required>
-        </label></p>
-        <p ><label>
-            Password:
-            <input class="userInput" type="password" name="password" id="password" required>
-        </label></p>
-        <p><label>
-            Date of Birth:
-            <input class="userInput" type="text" id="dob" required>
-        </label></p>
-		<p><label>
-			Favorite Color:
-			<input class="userInput" type="text" id="food" required>
-		</label></p>
-        <p>
-            <button onclick="login_user()">Submit</button>
-        </p>
-    </form>
-</div>
+        signUp_api(enteredName, enteredUid, enteredPassword, enteredDOB)
+        
+      }
+    
 
+    function signUp_api(name, uid, pw, dob){
+      let signupHeaders = new Headers();
+      signupHeaders.append('111', '222');
+      
+      signupHeaders.append("Accept", "*/*");
+      signupHeaders.append("Accept-Language", "en-US,en;q=0.9");
+      signupHeaders.append("Content-Type", "application/json");
+      
 
-<!-- 
-Below JavaScript code is designed to handle user authentication in a web application. It's written to work with a backend server that uses JWT (JSON Web Tokens) for authentication.
-
-The script defines a function when the page loads. This function is triggered when the Login button in the HTML form above is pressed. 
- -->
-<script type="module">
-    // uri variable and options object are obtained from config.js
-    import { uri, options } from '{{site.baseurl}}/assets/js/api/config.js';
-    const url = uri + '/api/users/authenticate';
-    const body = {
-            // name: document.getElementById("name").value,
-            uid: "toby",
-            password: "123toby"
-            // dob: document.getElementById("dob").value
-        };
-    const authOptions = {
-            ...options, // This will copy all properties from options
-            method: 'POST', // Override the method property
-            cache: 'no-cache', // Set the cache property
-            body: JSON.stringify(body)
-        };
-    fetch(url, authOptions)
-    function login_user(){
-        // Set Authenticate endpoint
-        const url = uri + '/api/users/';
-
-        // Set the body of the request to include login data from the DOM
-        const body = {
-            name: document.getElementById("name").value,
-            uid: document.getElementById("uid").value,
-            password: document.getElementById("password").value,
-            dob: document.getElementById("dob").value,
-			fav_food: document.getElementById("color").value
-        };
-
-        // Change options according to Authentication requirements
-        const authOptions = {
-            ...options, // This will copy all properties from options
-            method: 'POST', // Override the method property
-            cache: 'no-cache', // Set the cache property
-            body: JSON.stringify(body)
-        };
-
-        // Fetch JWT
-        fetch(url, authOptions)
-        .then(response => {
-            // handle error response from Web API
-            if (!response.ok) {
-                const errorMsg = 'Login error: ' + response.status;
-                console.log(errorMsg);
-                return;
-            }
-            // Success!!!
-            // Redirect to the database page
-            window.location.href = "{{site.baseurl}}/data/database";
-        })
-        // catch fetch errors (ie ACCESS to server blocked)
-        .catch(err => {
-            console.error(err);
+      var raw = JSON.stringify({
+          "name" : name,
+          "uid": uid,
+          "password": pw,
+          "dob": dob
         });
+
+      var requestOptions = {
+          method: 'POST',
+          headers: signupHeaders,
+          body: raw,
+          redirect: 'follow'
+        };
+
+      fetch("http://127.0.0.1:8086/api/users", requestOptions)
+          .then(response => {
+            if (response.ok) {
+                console.log("Successfully Signed Up");
+                alert("Account has been created. You will be directed to login page shortly.");
+                window.location.href = "https://drishyamody.github.io/student2//2023/01/22/SASS_Javascript_Login.html"
+              } else {
+                console.error("Sign Up Failed");
+                // You can handle failed login attempts here
+                const errorMessageDiv = document.getElementById('errorMessage');
+                errorMessageDiv.innerHTML = '<label style="color: red;">User Sign Up Failed</label>';
+              }
+          })
+          .then(result => { 
+            console.log(result);
+            
+            })
+          .catch(error => console.log('error', error));
+          
+
+      
+      //return response
     }
 
-    // Attach login_user to the window object, allowing access to form action
-    window.login_user = login_user;
-</script>
+
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Include the compiled CSS file -->
+</head>
+
+<body>
+    <div class="container">
+    <form action="javascript:signUp_user()">
+    <p><label for="Name">First Name:</label>
+     <input type="text" id="name" placeholder="Your First Name" />
+    </p>
+    <p><label for="uid">User ID:</label> 
+    <input type="text" id="uid" placeholder="User ID" />
+    </p>
+    <p><label for="password">Password:</label>
+    <input type="password" id="password" placeholder="Password" />
+    </p>
+    <p><label for="dob">Date Of Birth:</label>
+    <input type="text" id="dob" placeholder="Date of Birth (YYYY-MM-DD)" />
+    </p>
+    <button class="button-spacing">Submit</button>
+    </form>
+  </div>
+   
+
+   
+</body>
+
+</html>
