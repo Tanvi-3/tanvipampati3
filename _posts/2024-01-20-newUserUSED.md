@@ -38,10 +38,10 @@ The form triggers the login_user function defined in the JavaScript below when t
         </label></p>
 		<p><label>
 			Favorite Color:
-			<input class="userInput" type="text" id="food" required>
+			<input class="userInput" type="text" id="color" required>
 		</label></p>
         <p>
-            <button onclick="login_user()">Submit</button>
+            <button type="button" onclick="login_user()">Submit</button>
         </p>
     </form>
 </div>
