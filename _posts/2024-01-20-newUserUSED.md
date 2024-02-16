@@ -9,7 +9,7 @@ hide: true
 permalink: /newUser
 ---
 
-<style>
+<html lang="en">
 
 </style>
 <!-- 
@@ -79,7 +79,7 @@ The script defines a function when the page loads. This function is triggered wh
             uid: document.getElementById("uid").value,
             password: document.getElementById("password").value,
             dob: document.getElementById("dob").value,
-			fav_food: document.getElementById("color").value
+			      fav_color: document.getElementById("color").value
         };
 
         // Change options according to Authentication requirements
@@ -101,7 +101,7 @@ The script defines a function when the page loads. This function is triggered wh
             }
             // Success!!!
             // Redirect to the database page
-            window.location.href = "{{site.baseurl}}/data/database";
+            window.location.href = "https://www.amazon.com/";
         })
         // catch fetch errors (ie ACCESS to server blocked)
         .catch(err => {
